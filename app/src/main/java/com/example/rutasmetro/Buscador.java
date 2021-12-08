@@ -28,6 +28,7 @@ public class Buscador extends AppCompatActivity {
     Button enviar;
     String direccionOrigen, direccionDestino;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +74,14 @@ public class Buscador extends AppCompatActivity {
             NetworkInfo estadoRed = miManager.getActiveNetworkInfo();
 
             if (estadoRed == null || !estadoRed.isConnected() || !estadoRed.isAvailable()) {
-                return getString(R.string.error_iconexion);
+                return getString(R.string.error_conexion);
+            }
+            try {
+                puntoOrigen= OptimizacionBusqueda //continuara el codigo en esta parte
+
+
+            } catch (Exception e) {
+
             }
             return null;
 
